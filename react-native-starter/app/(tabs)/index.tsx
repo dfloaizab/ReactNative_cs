@@ -117,7 +117,7 @@ import {
   Alert,
 } from 'react-native';
 import { router } from 'expo-router';
-import { login } from '../../services/auth.service';
+//import { login } from '../../services/auth.service';
 
 export default function WelcomeScreen() {
   // Estados locales para los campos del formulario
@@ -134,32 +134,32 @@ export default function WelcomeScreen() {
    * Maneja el envío del formulario de login.
    * Valida campos, llama al servicio y navega si es exitoso.
    */
-  const handleLogin = async () => {
-    // Validación básica del lado cliente
-    if (!username.trim() || !password.trim()) {
-      setError('Por favor completa todos los campos.');
-      return;
-    }
+  // const handleLogin = async () => {
+  //   // Validación básica del lado cliente
+  //   if (!username.trim() || !password.trim()) {
+  //     setError('Por favor completa todos los campos.');
+  //     return;
+  //   }
 
-    setError('');       // Limpia errores previos
-    setIsLoading(true); // Muestra spinner
+  //   setError('');       // Limpia errores previos
+  //   setIsLoading(true); // Muestra spinner
 
-    try {
-      const result = await login({ username: username.trim(), password });
+  //   try {
+  //     const result = await login({ username: username.trim(), password });
       
-      // Login exitoso: navegar a la pantalla del mapa
-      // replace() reemplaza el historial para que el usuario no pueda
-      // volver al login con el botón de atrás
-      router.replace('/(tabs)/explore');
+  //     // Login exitoso: navegar a la pantalla del mapa
+  //     // replace() reemplaza el historial para que el usuario no pueda
+  //     // volver al login con el botón de atrás
+  //     router.replace('/(tabs)/explore');
 
-    } catch (err: any) {
-      // Muestra el mensaje de error del backend o uno genérico
-      const message = err.response?.data?.message || 'Error de conexión. Verifica tu internet.';
-      setError(message);
-    } finally {
-      setIsLoading(false); // Oculta el spinner siempre, sin importar el resultado
-    }
-  };
+  //   } catch (err: any) {
+  //     // Muestra el mensaje de error del backend o uno genérico
+  //     const message = err.response?.data?.message || 'Error de conexión. Verifica tu internet.';
+  //     setError(message);
+  //   } finally {
+  //     setIsLoading(false); // Oculta el spinner siempre, sin importar el resultado
+  //   }
+  // };
 
   return (
     // KeyboardAvoidingView evita que el teclado tape los campos de texto
@@ -225,7 +225,7 @@ export default function WelcomeScreen() {
               }}
               secureTextEntry={true}    // Oculta el texto (••••)
               returnKeyType="done"
-              onSubmitEditing={handleLogin}  // Permite hacer login con Enter
+              //onSubmitEditing={handleLogin}  // Permite hacer login con Enter
             />
           </View>
 
@@ -239,7 +239,7 @@ export default function WelcomeScreen() {
           {/* Botón de Login */}
           <TouchableOpacity
             style={[styles.loginButton, isLoading && styles.loginButtonDisabled]}
-            onPress={handleLogin}
+            //onPress={handleLogin}
             disabled={isLoading}
             activeOpacity={0.8}
           >
