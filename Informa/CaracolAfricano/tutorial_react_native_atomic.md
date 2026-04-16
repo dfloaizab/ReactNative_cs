@@ -1558,4 +1558,5 @@ src/
 
 ---
 
-*Tutorial creado para el Semillero Informa — App Caracol Africano*  
+*Semillero Informa — App Caracol Africano - 2026*  
+*Made by humans with heart and soul*
