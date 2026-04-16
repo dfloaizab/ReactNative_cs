@@ -1,7 +1,5 @@
-# Tutorial: Pantallas de Ecosistema con React Native, Atomic Design y Expo Go
-
-> **Nivel:** Principiante en React Native · **Duración estimada:** 4–6 horas  
-> **Resultado final:** Dos pantallas funcionales (Home + Protocolo de Manejo) desplegadas en Expo Go
+# Tutorial: Prototipos de Pantallas para App de Caracol Africano con React Native, Atomic Design y Expo Go
+## Semillero Informa, 2026
 
 ---
 
@@ -1133,21 +1131,21 @@ interface HomeScreenProps {
 const EDUCATION_ITEMS = [
   {
     id: "1",
-    imageSource: { uri: "https://images.unsplash.com/photo-1553696590-9f3f04c38fc6?w=400" },
+    imageSource: { uri: "https://dfloaizab.github.io/imgs/mobile/danger.png" },
     badgeType: "danger" as const,
     badgeLabel: "PELIGRO",
     title: "Riesgos para la salud",
   },
   {
     id: "2",
-    imageSource: { uri: "https://images.unsplash.com/photo-1583947581924-860bda6a26df?w=400" },
+    imageSource: { uri: "https://dfloaizab.github.io/imgs/mobile/warning.png" },
     badgeType: "prevention" as const,
     badgeLabel: "PREVENCIÓN",
     title: "Uso de guantes",
   },
   {
     id: "3",
-    imageSource: { uri: "https://images.unsplash.com/photo-1544212408-c44d374f5d7e?w=400" },
+    imageSource: { uri: "https://dfloaizab.github.io/imgs/mobile/user-guide.png" },
     badgeType: "guide" as const,
     badgeLabel: "GUÍA",
     title: "Zonas afectadas",
@@ -1298,7 +1296,7 @@ export function ProtocolScreen({ navigation }: ProtocolScreenProps) {
       >
         {/* Imagen de cabecera */}
         <Image
-          source={{ uri: "https://images.unsplash.com/photo-1553696590-9f3f04c38fc6?w=800" }}
+          source={{ uri: "https://dfloaizab.github.io/imgs/mobile/forest.jpg" }}
           style={styles.headerImage}
           resizeMode="cover"
         />
@@ -1560,5 +1558,4 @@ src/
 
 ---
 
-*Tutorial creado para el Semillero Informa — Bootcamp Multiplataforma 2026*  
-*Basado en las pantallas del proyecto EcosistemaApp (Cali, Colombia)*
+*Tutorial creado para el Semillero Informa — App Caracol Africano*  
